@@ -1,0 +1,78 @@
+public class Person {
+   private  String firstName, lastName;
+    private int age;
+
+
+
+    public String getFullName(){
+        if(firstName == "" && lastName == ""){
+            return "";
+        }else if(lastName == ""){
+
+            return firstName;
+        }
+        else if(firstName == "") {
+
+            return lastName;
+        }
+        else {
+
+            return firstName + " " + lastName;
+        }
+
+
+    }
+
+    public boolean isTeen(){
+        if(age > 12 && age < 20){
+
+            return  true;
+        }else {
+
+            return false;
+        }
+
+    }
+
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        if(age < 0 || age > 100){
+            setAge(0);
+
+        }
+        else{
+            this.age = age;
+
+        }
+
+
+    }
+    public static void main(String[] args) {
+        Person p = new Person();
+        p.setFirstName("Daman");
+        p.setLastName("");
+
+    }
+}
+
+
